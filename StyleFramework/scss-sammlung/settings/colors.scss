@@ -1,0 +1,64 @@
+// theme colors
+// https://medium.com/@katiemctigue/how-to-create-a-dark-mode-in-sass-609f131a3995
+
+
+$themes: (
+  light: (
+    primary: #f719,
+    secondary: #00ccf0,
+    text: #000,
+    bg: #efefef,
+    dark: #333,
+    light: #f0f0f0,
+    border: #325c8c,
+    line: #d8b697,
+    card: #00ff00,
+    link: red
+  ),
+  dark: (
+    primary: #f719,
+    secondary: #00ccf0,
+    text: #efefef,
+    bg: #333,
+    dark: #333,
+    light: #f719,
+    border: #325c8c,
+    line: #ebd9c8,
+    card: #e600ff,
+    link: red
+  ),
+);
+
+// @mixin themed() {
+//   @each $theme, $map in $themes {
+//     body.theme--#{$theme}{
+//       $theme-map: ();
+//       @each $key, $submap in $map {
+//         $value: map-get(map-get($themes, $theme), '#{$key}');
+//         $theme-map: map-merge($theme-map, ($key: $value));
+//       }
+//       @content;
+//       $theme-map: null;
+//     }
+//   }
+// }
+
+// @function t($key) {
+//   @return map-get($theme-map, $key);
+// }
+
+// @include themed() {
+//   background: t($card-bg);
+//   color: t($text);
+//   border: 1px solid t($border);
+// }
+
+// :root{
+//   color-scheme: light dark;
+//   @include themed(){
+//     :root{
+//       color: t('text');
+//       background: t($bg);
+//     }
+//   }
+// }

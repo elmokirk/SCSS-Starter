@@ -1,0 +1,118 @@
+dl {
+  dt,
+  dd {
+    display: block;
+    padding: rem(15px);
+  }
+
+  dt {
+    padding-bottom: 0;
+    font-weight: bold;
+    margin-top: $gap;
+  }
+
+  dd {
+    padding-top: 0;
+
+    + dt {
+      margin-top: rem(10px);
+    }
+
+    + dd {
+      margin-top: rem(-15px);
+    }
+  }
+}
+/////// styles
+
+* {
+  margin: 0;
+  padding: 0;
+
+  &,
+  &:before,
+  &:after {
+    box-sizing: inherit;
+  }
+}
+
+::selection {
+  // color: $primary;
+  // background: $dark;
+}
+::-moz-selection {
+  // color: $primary;
+  // background: $dark;
+}
+
+html::-webkit-scrollbar{
+  width: 10px;
+}
+html::-webkit-scrollbar-track{
+  // background: $light;
+}
+html::-webkit-scrollbar-thumb{
+  // background: $dark;
+}
+html {
+  box-sizing: border-box;
+  // color: $dark;
+  // font-family: $main-font;
+  font-size: clamp(18px, 2vw, 26px);
+  hyphens: manual;
+  line-height: $baseLH;
+  scroll-behavior: smooth;
+  text-rendering: optimizeLegibility;
+  /* disable text resize in landscape. e.g. on iphone */
+  text-size-adjust: none;
+  font-family: sans-serif
+  ;
+}
+
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4,
+h5, .h5,
+h6, .h6{
+  display: block;
+  text-rendering: optimizeLegibility;
+  hyphens: auto;
+  font-weight: bold;
+  position: relative;
+  margin-bottom: clamp(#{$gap}, 3vw, 28px);
+  font-size: clamp(32px, 3vw, 42px);
+  margin-right: 8px;
+  word-wrap: break-word;
+  color:#000;
+
+  &:after{
+    @include pseudo();
+    width: 8px;
+    top: 10%;
+    left: 100%;
+    height: 80%;
+    // background-color: $dark;
+  }
+}
+img{
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a{
+  // color: $dark;
+  // text-decoration: 2px underline $dark;
+  text-underline-offset: 7px;
+  transition: inherit;
+  font-size: clamp(18px, 5vw, 22px);
+  transition: text-decoration ease-in-out 400ms 800ms, text-underline-offset ease-in 800ms;
+  word-break: break-word;
+
+
+  &:hover{
+    text-decoration: none;
+    text-underline-offset: 3px;
+  }
+}
