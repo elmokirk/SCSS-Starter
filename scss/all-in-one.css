@@ -50,12 +50,6 @@ body.dark {
   --link--dark: red;
   --overlay--dark: rgba(0, 0, 0, 0.1882352941);
 }
-body.dark body {
-  background: var(--bg--dark);
-}
-body.light body {
-  background: var(--bg--light);
-}
 @media screen and (min-width: 1280px) {
   body.noScroll {
     overflow-y: scroll;
@@ -316,7 +310,6 @@ body.light .test {
   display: block;
   text-rendering: optimizeLegibility;
   -webkit-hyphens: auto;
-      -ms-hyphens: auto;
           hyphens: auto;
   font-weight: bold;
   position: relative;
@@ -336,7 +329,6 @@ body.light .h1, body.light h1 {
   display: block;
   text-rendering: optimizeLegibility;
   -webkit-hyphens: auto;
-      -ms-hyphens: auto;
           hyphens: auto;
   font-weight: bold;
   position: relative;
@@ -356,7 +348,6 @@ body.light .h2, body.light h2 {
   display: block;
   text-rendering: optimizeLegibility;
   -webkit-hyphens: auto;
-      -ms-hyphens: auto;
           hyphens: auto;
   font-weight: bold;
   position: relative;
@@ -376,7 +367,6 @@ body.light .h3, body.light h3 {
   display: block;
   text-rendering: optimizeLegibility;
   -webkit-hyphens: auto;
-      -ms-hyphens: auto;
           hyphens: auto;
   font-weight: bold;
   position: relative;
@@ -396,7 +386,6 @@ body.light .h4, body.light h4 {
   display: block;
   text-rendering: optimizeLegibility;
   -webkit-hyphens: auto;
-      -ms-hyphens: auto;
           hyphens: auto;
   font-weight: bold;
   position: relative;
@@ -416,7 +405,6 @@ body.light .h5, body.light h5 {
   display: block;
   text-rendering: optimizeLegibility;
   -webkit-hyphens: auto;
-      -ms-hyphens: auto;
           hyphens: auto;
   font-weight: bold;
   position: relative;
@@ -436,7 +424,6 @@ body.light .h6, body.light h6 {
   display: block;
   text-rendering: optimizeLegibility;
   -webkit-hyphens: auto;
-      -ms-hyphens: auto;
           hyphens: auto;
   font-weight: bold;
   position: relative;
@@ -853,7 +840,6 @@ html {
   font-family: Arial;
   font-size: clamp(16px,-50vw ,18px);
   -webkit-hyphens: manual;
-      -ms-hyphens: manual;
           hyphens: manual;
   line-height: 1.5;
   scroll-behavior: smooth;
@@ -863,6 +849,12 @@ html {
      -moz-text-size-adjust: none;
           text-size-adjust: none;
   font-family: sans-serif;
+}
+body.dark html {
+  background: var(--bg--dark);
+}
+body.light html {
+  background: var(--bg--light);
 }
 
 img {

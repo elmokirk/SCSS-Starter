@@ -155,6 +155,7 @@ $cFill: #78209f;
     }
   } 
 }
+
 /// body styles
 body{
   // theme css var generator
@@ -165,7 +166,6 @@ body{
       }
     }
   }
-  @include themed('background', 'bg' );
   &.noScroll{
     @include breakpoint(#{$navBreak}){
       overflow-y: scroll;
@@ -605,7 +605,7 @@ $fontSizes: (
 .pageWrap{
   position: relative;
   z-index: 4500;
-  width: 100%;
+  width: 100vw;
   max-width: $maxWidth;
   margin: 0 auto;
   overflow: hidden;
@@ -934,7 +934,8 @@ html {
   text-rendering: optimizeLegibility;
   /* disable text resize in landscape. e.g. on iphone */
   text-size-adjust: none;
-  font-family: sans-serif
+  font-family: sans-serif;
+  @include themed('background', 'bg' );
   ;
 }
 img{
